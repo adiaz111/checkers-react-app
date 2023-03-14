@@ -1,3 +1,17 @@
+import Button from "react-bootstrap/Button";
+import { useNavigate } from "react-router-dom";
+
 export const Setup = () => {
-  return <h2>Setup</h2>;
+  const nav = useNavigate();
+
+  return (
+    <>
+      <h2>Setup</h2>
+      <p>Some setup things go here</p>
+
+      <Button variant="outline-primary" onClick={() => nav("/play")}>
+        Start Game
+      </Button>
+    </>
+  );
 };
