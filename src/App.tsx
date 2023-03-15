@@ -44,6 +44,10 @@ const hardcodedGameResults: GameResult[] = [
 const App = () => {
   const [results, setGameResults] = useState(hardcodedGameResults);
 
+  const addGameResult = (r: GameResult) => {
+    setGameResults([...results, r]);
+  };
+
   return (
     <div className="App m-3">
       <h1>TCA Bar React TS Bootstrap</h1>
@@ -56,7 +60,10 @@ const App = () => {
             element={<Home leaderboardData={calculateLeaderboard(results)} />}
           />
           <Route path="/setup" element={<Setup />} />
-          <Route path="/play" element={<Play />} />
+          <Route
+            path="/play"
+            element={<Play addGameResultFunc={addGameResult} />}
+          />
         </Routes>
       </HashRouter>
     </div>
