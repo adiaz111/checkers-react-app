@@ -13,17 +13,20 @@ export interface LeaderboardPlayer {
   avg: string;
 }
 
+export interface SetupInfo {
+  start: string;
+  chosenPlayers: string[];
+}
+
 export type GetPreviousPlayersFunc = (results: GameResult[]) => string[];
 export type CalculateLeaderboardFunc = (
   results: GameResult[]
 ) => LeaderboardPlayer[];
-// export type AddGameResultFunc = (results: GameResult[], result: GameResult) => GameResult[];
 
 //
 // Default function implementations...
 //
 export const getPreviousPlayers: GetPreviousPlayersFunc = (grs) => {
-  // const allPreviousPlayers = grs.map(x => x.players);
   const allPreviousPlayers = grs.flatMap((x) => x.players);
 
   return [...new Set(allPreviousPlayers)].sort();
@@ -71,8 +74,3 @@ export const calculateLeaderboard: CalculateLeaderboardFunc = (results) => {
       }))
   );
 };
-
-// export const addGameResult: AddGameResultFunc = (results, result) => [
-//     ...results
-//     , result
-// ];
