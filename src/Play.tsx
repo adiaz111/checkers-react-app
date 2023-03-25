@@ -16,6 +16,8 @@ export const Play: React.FC<PlayProps> = ({ addGameResultFunc, setupInfo }) => {
     addGameResultFunc({
       winner: winner,
       players: setupInfo.chosenPlayers,
+      start: setupInfo.start,
+      end: new Date().toISOString(),
     });
 
     nav(-2);

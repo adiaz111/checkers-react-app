@@ -3,15 +3,24 @@ import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
 import { LeaderboardPlayer } from "./front-end-model";
 import Table from "react-bootstrap/Table";
+import { durationFormatter } from "human-readable";
 
 interface HomeProps {
   leaderboardData: LeaderboardPlayer[];
+  shortestGameDuration: number;
+  longestGameDuration: number;
 }
 
-export const Home: React.FC<HomeProps> = ({ leaderboardData }) => {
+export const Home: React.FC<HomeProps> = ({
+  leaderboardData,
+  shortestGameDuration,
+  longestGameDuration,
+}) => {
   console.log(leaderboardData);
 
   const nav = useNavigate();
+
+  const format = durationFormatter();
 
   return (
     <>
@@ -46,6 +55,14 @@ export const Home: React.FC<HomeProps> = ({ leaderboardData }) => {
               </tbody>
             </Table>
           )}
+        </Card.Body>
+      </Card>
+
+      <Card>
+        <Card.Header>Game Time Fun Facts</Card.Header>
+        <Card.Body>
+          <p>{`${format(shortestGameDuration)} shortest game ever`}</p>
+          <p>{`${format(longestGameDuration)} longest game ever`}</p>
         </Card.Body>
       </Card>
     </>
