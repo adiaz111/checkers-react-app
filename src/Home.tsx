@@ -9,12 +9,14 @@ interface HomeProps {
   leaderboardData: LeaderboardPlayer[];
   shortestGameDuration: number;
   longestGameDuration: number;
+  reallyCoolThingHappenedPercent: number;
 }
 
 export const Home: React.FC<HomeProps> = ({
   leaderboardData,
   shortestGameDuration,
   longestGameDuration,
+  reallyCoolThingHappenedPercent,
 }) => {
   console.log(leaderboardData);
 
@@ -63,6 +65,15 @@ export const Home: React.FC<HomeProps> = ({
         <Card.Body>
           <p>{`${format(shortestGameDuration)} shortest game ever`}</p>
           <p>{`${format(longestGameDuration)} longest game ever`}</p>
+        </Card.Body>
+      </Card>
+
+      <Card>
+        <Card.Header>Really Cool Thing</Card.Header>
+        <Card.Body>
+          <p>{`Happens ${(reallyCoolThingHappenedPercent * 100).toFixed(
+            2
+          )} % of games`}</p>
         </Card.Body>
       </Card>
     </>

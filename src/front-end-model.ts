@@ -7,6 +7,8 @@ export interface GameResult {
 
   start: string;
   end: string;
+
+  reallyCoolThingHappened: boolean;
 }
 
 export interface LeaderboardPlayer {
@@ -91,3 +93,11 @@ export const getLongestGameDuration = (results: GameResult[]) =>
       (x) => new Date(x.end).getTime() - new Date(x.start).getTime()
     )
   );
+
+export const getPercentGamesReallyCoolThingHappened = (
+  results: GameResult[]
+) => {
+  return results.length
+    ? results.filter((x) => x.reallyCoolThingHappened).length / results.length
+    : 0;
+};
