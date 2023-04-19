@@ -35,11 +35,16 @@ export const Home: React.FC<HomeProps> = ({
 
   return (
     <>
-      <Button variant="outline-primary" onClick={() => nav("/setup")}>
-        Play Bar
+      <Button
+        variant="outline-danger py-2 px-4 m-2"
+        onClick={() => nav("/setup")}
+      >
+        Start Game
       </Button>
-      <Card className="mt-3 overflow-hidden">
-        <Card.Header>Leaderboard</Card.Header>
+      <Card className="mt-3 overflow-hidden ">
+        <Card.Header className="bg-danger text-light p-2 h5">
+          Leaderboard
+        </Card.Header>
         <Card.Body>
           {leaderboardData.length == 0 && (
             <p>Play a game to see your leaderboard...</p>
@@ -51,7 +56,7 @@ export const Home: React.FC<HomeProps> = ({
                   <th>W</th>
                   <th>L</th>
                   <th>AVG</th>
-                  <th></th>
+                  <th>Name</th>
                 </tr>
               </thead>
               <tbody>
@@ -69,14 +74,16 @@ export const Home: React.FC<HomeProps> = ({
         </Card.Body>
       </Card>
       <Card>
-        <Card.Header>Game Time Fun Facts</Card.Header>
+        <Card.Header className="bg-danger text-light p-2 h5">
+          Game Time Fun Facts
+        </Card.Header>
         <Card.Body>
           <p>{`${format(shortestGameDuration)} shortest game ever`}</p>
           <p>{`${format(longestGameDuration)} longest game ever`}</p>
           {averageGameDuration.length > 0 && (
             <Table striped bordered>
               <thead>
-                <tr>
+                <tr className="bg-dark text-light">
                   <th>Number of Players</th>
                   <th>Average Duration</th>
                 </tr>
@@ -95,7 +102,9 @@ export const Home: React.FC<HomeProps> = ({
       </Card>
 
       <Card>
-        <Card.Header>Non Decision (No Contest)</Card.Header>
+        <Card.Header className="bg-danger text-light p-2 h5">
+          Non Decision (No Contest)
+        </Card.Header>
         <Card.Body>
           <p>{`Happens ${(reallyCoolThingHappenedPercent * 100).toFixed(
             2
@@ -104,7 +113,7 @@ export const Home: React.FC<HomeProps> = ({
       </Card>
 
       <Card>
-        <Card.Header>Kings</Card.Header>
+        <Card.Header className="bg-danger text-light p-2 h5">Kings</Card.Header>
         <Card.Body>
           <p>{`Happens ${(reallyCoolThingHappenedPercent2 * 100).toFixed(
             2
@@ -113,7 +122,9 @@ export const Home: React.FC<HomeProps> = ({
       </Card>
 
       <Card>
-        <Card.Header>Double/Triple+ move accured</Card.Header>
+        <Card.Header className="bg-danger text-light p-2 h5">
+          Double/Triple+ move accured
+        </Card.Header>
         <Card.Body>
           <p>{`Happens ${(reallyCoolThingHappenedPercent3 * 100).toFixed(
             2
