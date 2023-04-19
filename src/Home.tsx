@@ -14,6 +14,8 @@ interface HomeProps {
     avgGameDuration: number;
   }[];
   reallyCoolThingHappenedPercent: number;
+  reallyCoolThingHappenedPercent2: number;
+  reallyCoolThingHappenedPercent3: number;
 }
 
 export const Home: React.FC<HomeProps> = ({
@@ -22,6 +24,8 @@ export const Home: React.FC<HomeProps> = ({
   longestGameDuration,
   averageGameDuration,
   reallyCoolThingHappenedPercent,
+  reallyCoolThingHappenedPercent2,
+  reallyCoolThingHappenedPercent3,
 }) => {
   console.log(leaderboardData);
 
@@ -73,7 +77,7 @@ export const Home: React.FC<HomeProps> = ({
             <Table striped bordered>
               <thead>
                 <tr>
-                  <th>Player Count</th>
+                  <th>Number of Players</th>
                   <th>Average Duration</th>
                 </tr>
               </thead>
@@ -91,9 +95,27 @@ export const Home: React.FC<HomeProps> = ({
       </Card>
 
       <Card>
-        <Card.Header>Really Cool Thing</Card.Header>
+        <Card.Header>Non Decision (No Contest)</Card.Header>
         <Card.Body>
           <p>{`Happens ${(reallyCoolThingHappenedPercent * 100).toFixed(
+            2
+          )} % of games`}</p>
+        </Card.Body>
+      </Card>
+
+      <Card>
+        <Card.Header>Kings</Card.Header>
+        <Card.Body>
+          <p>{`Happens ${(reallyCoolThingHappenedPercent2 * 100).toFixed(
+            2
+          )} % of games`}</p>
+        </Card.Body>
+      </Card>
+
+      <Card>
+        <Card.Header>Double/Triple+ move accured</Card.Header>
+        <Card.Body>
+          <p>{`Happens ${(reallyCoolThingHappenedPercent3 * 100).toFixed(
             2
           )} % of games`}</p>
         </Card.Body>

@@ -9,6 +9,8 @@ export interface GameResult {
   end: string;
 
   reallyCoolThingHappened: boolean;
+  reallyCoolThingHappened2: boolean;
+  reallyCoolThingHappened3: boolean;
 }
 
 export interface LeaderboardPlayer {
@@ -122,5 +124,21 @@ export const getPercentGamesReallyCoolThingHappened = (
 ) => {
   return results.length
     ? results.filter((x) => x.reallyCoolThingHappened).length / results.length
+    : 0;
+};
+
+export const getPercentGamesReallyCoolThingHappened2 = (
+  results: GameResult[]
+) => {
+  return results.length
+    ? results.filter((x) => x.reallyCoolThingHappened2).length / results.length
+    : 0;
+};
+
+export const getPercentGamesReallyCoolThingHappened3 = (
+  results: GameResult[]
+) => {
+  return results.length
+    ? results.filter((x) => x.reallyCoolThingHappened3).length / results.length
     : 0;
 };

@@ -18,6 +18,8 @@ import {
   getLongestGameDuration,
   getAverageGameDurationByPlayerCount,
   getPercentGamesReallyCoolThingHappened,
+  getPercentGamesReallyCoolThingHappened2,
+  getPercentGamesReallyCoolThingHappened3,
 } from "./front-end-model";
 
 const hardcodedGameResults: GameResult[] = [
@@ -27,6 +29,8 @@ const hardcodedGameResults: GameResult[] = [
     start: "2023-03-23T17:38:23.230Z",
     end: "2023-03-23T17:40:23.230Z",
     reallyCoolThingHappened: false,
+    reallyCoolThingHappened2: false,
+    reallyCoolThingHappened3: false,
   },
   {
     winner: "Taylor",
@@ -34,6 +38,8 @@ const hardcodedGameResults: GameResult[] = [
     start: "2023-03-23T17:38:23.230Z",
     end: "2023-03-23T17:40:23.230Z",
     reallyCoolThingHappened: false,
+    reallyCoolThingHappened2: false,
+    reallyCoolThingHappened3: false,
   },
   {
     winner: "Taylor",
@@ -41,6 +47,8 @@ const hardcodedGameResults: GameResult[] = [
     start: "2023-03-23T17:38:23.230Z",
     end: "2023-03-23T17:48:23.230Z",
     reallyCoolThingHappened: false,
+    reallyCoolThingHappened2: false,
+    reallyCoolThingHappened3: false,
   },
   {
     winner: "X",
@@ -48,6 +56,8 @@ const hardcodedGameResults: GameResult[] = [
     start: "2023-03-23T17:38:23.230Z",
     end: "2023-03-23T17:40:23.230Z",
     reallyCoolThingHappened: false,
+    reallyCoolThingHappened2: false,
+    reallyCoolThingHappened3: false,
   },
   {
     winner: "X",
@@ -55,6 +65,8 @@ const hardcodedGameResults: GameResult[] = [
     start: "2023-03-23T17:38:23.230Z",
     end: "2023-03-23T17:40:23.230Z",
     reallyCoolThingHappened: false,
+    reallyCoolThingHappened2: false,
+    reallyCoolThingHappened3: false,
   },
   {
     winner: "Joe",
@@ -62,6 +74,8 @@ const hardcodedGameResults: GameResult[] = [
     start: "2023-03-23T17:38:23.230Z",
     end: "2023-03-23T17:40:23.230Z",
     reallyCoolThingHappened: false,
+    reallyCoolThingHappened2: false,
+    reallyCoolThingHappened3: false,
   },
   {
     winner: "Jack",
@@ -69,6 +83,8 @@ const hardcodedGameResults: GameResult[] = [
     start: "2023-03-23T17:38:23.230Z",
     end: "2023-03-23T17:40:23.230Z",
     reallyCoolThingHappened: false,
+    reallyCoolThingHappened2: false,
+    reallyCoolThingHappened3: false,
   },
 ];
 
@@ -102,6 +118,12 @@ const App = () => {
                   results
                 )}
                 reallyCoolThingHappenedPercent={getPercentGamesReallyCoolThingHappened(
+                  results
+                )}
+                reallyCoolThingHappenedPercent2={getPercentGamesReallyCoolThingHappened2(
+                  results
+                )}
+                reallyCoolThingHappenedPercent3={getPercentGamesReallyCoolThingHappened3(
                   results
                 )}
               />

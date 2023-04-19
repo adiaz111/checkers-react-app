@@ -13,6 +13,8 @@ export const Play: React.FC<PlayProps> = ({ addGameResultFunc, setupInfo }) => {
   console.log(setupInfo);
 
   const [happened, setHappened] = useState(false);
+  const [happened2, setHappened2] = useState(false);
+  const [happened3, setHappened3] = useState(false);
 
   const nav = useNavigate();
 
@@ -23,6 +25,8 @@ export const Play: React.FC<PlayProps> = ({ addGameResultFunc, setupInfo }) => {
       start: setupInfo.start,
       end: new Date().toISOString(),
       reallyCoolThingHappened: happened,
+      reallyCoolThingHappened2: happened2,
+      reallyCoolThingHappened3: happened3,
     });
 
     nav(-2);
@@ -33,13 +37,30 @@ export const Play: React.FC<PlayProps> = ({ addGameResultFunc, setupInfo }) => {
       <h2>Play</h2>
       <Form.Check
         label="Really Cool thing happened"
-        type="switch"
+        type="checkbox"
         checked={happened}
         onChange={(e) => setHappened(e.target.checked)}
+      />
+      <Form.Check
+        label="King"
+        type="checkbox"
+        checked={happened2}
+        onChange={(e) => setHappened2(e.target.checked)}
+      />
+      <Form.Check
+        label="Double/Tripe+ Move Happened"
+        type="checkbox"
+        checked={happened3}
+        onChange={(e) => setHappened3(e.target.checked)}
       />{" "}
       {setupInfo.chosenPlayers.map((x) => (
         <Button variant="outline-primary" onClick={() => endGame(x)}>
           {x} Won
+        </Button>
+      ))}
+      {setupInfo.chosenPlayers.map((end) => (
+        <Button variant="outline-primary" onClick={() => endGame(end)}>
+          Home Button in progress still
         </Button>
       ))}
     </>
