@@ -56,12 +56,12 @@ export const Play: React.FC<PlayProps> = ({ addGameResultFunc, setupInfo }) => {
       />{" "}
       <hr />
       {setupInfo.chosenPlayers.map((x) => (
-        <Button variant="outline-primary" onClick={() => endGame(x)}>
+        <Button variant="outline-danger" onClick={() => endGame(x)}>
           {x} Won
         </Button>
       ))}
       <hr />
-      <Button variant="outline-danger" onClick={() => endGame("/")}>
+      <Button className="bg-dark py-2 px-3" onClick={() => endGame("/")}>
         EndGame
       </Button>
     </>
