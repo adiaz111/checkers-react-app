@@ -35,8 +35,9 @@ export const Play: React.FC<PlayProps> = ({ addGameResultFunc, setupInfo }) => {
   return (
     <>
       <h2>Play</h2>
+      <hr />
       <Form.Check
-        label="Really Cool thing happened"
+        label="Non Decision (No Contest)"
         type="checkbox"
         checked={happened}
         onChange={(e) => setHappened(e.target.checked)}
@@ -53,11 +54,13 @@ export const Play: React.FC<PlayProps> = ({ addGameResultFunc, setupInfo }) => {
         checked={happened3}
         onChange={(e) => setHappened3(e.target.checked)}
       />{" "}
+      <hr />
       {setupInfo.chosenPlayers.map((x) => (
         <Button variant="outline-primary" onClick={() => endGame(x)}>
           {x} Won
         </Button>
       ))}
+      <hr />
     </>
   );
 };
