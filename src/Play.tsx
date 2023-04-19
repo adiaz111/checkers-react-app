@@ -61,6 +61,9 @@ export const Play: React.FC<PlayProps> = ({ addGameResultFunc, setupInfo }) => {
         </Button>
       ))}
       <hr />
+      <Button variant="outline-danger" onClick={() => endGame("/")}>
+        EndGame
+      </Button>
     </>
   );
 };
