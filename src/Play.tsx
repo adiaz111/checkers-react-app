@@ -58,11 +58,6 @@ export const Play: React.FC<PlayProps> = ({ addGameResultFunc, setupInfo }) => {
           {x} Won
         </Button>
       ))}
-      {setupInfo.chosenPlayers.map((end) => (
-        <Button variant="outline-primary" onClick={() => endGame(end)}>
-          Home Button in progress still
-        </Button>
-      ))}
     </>
   );
 };
