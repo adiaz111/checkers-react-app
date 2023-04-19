@@ -88,8 +88,8 @@ export const Setup: React.FC<SetupProps> = ({
         {chosenPlayers.map((x) => (
           <Form.Check
             className="d-flex flex-row p-1 h6 justify-content-center"
-            label={x.name}
             checked={x.checked}
+            label={`󠁝󠁝~${x.name}`}
             onChange={() => togglePlayer(x.name)}
           />
         ))}
