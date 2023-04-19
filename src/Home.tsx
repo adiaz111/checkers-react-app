@@ -9,6 +9,10 @@ interface HomeProps {
   leaderboardData: LeaderboardPlayer[];
   shortestGameDuration: number;
   longestGameDuration: number;
+  averageGameDuration: {
+    playerCount: number;
+    avgGameDuration: number;
+  }[];
   reallyCoolThingHappenedPercent: number;
 }
 
@@ -16,6 +20,7 @@ export const Home: React.FC<HomeProps> = ({
   leaderboardData,
   shortestGameDuration,
   longestGameDuration,
+  averageGameDuration,
   reallyCoolThingHappenedPercent,
 }) => {
   console.log(leaderboardData);
@@ -59,12 +64,29 @@ export const Home: React.FC<HomeProps> = ({
           )}
         </Card.Body>
       </Card>
-
       <Card>
         <Card.Header>Game Time Fun Facts</Card.Header>
         <Card.Body>
           <p>{`${format(shortestGameDuration)} shortest game ever`}</p>
           <p>{`${format(longestGameDuration)} longest game ever`}</p>
+          {averageGameDuration.length > 0 && (
+            <Table striped bordered>
+              <thead>
+                <tr>
+                  <th>Player Count</th>
+                  <th>Average Duration</th>
+                </tr>
+              </thead>
+              <tbody>
+                {averageGameDuration.map((x) => (
+                  <tr>
+                    <td>{x.playerCount}</td>
+                    <td>{`${format(x.avgGameDuration)}`}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          )}
         </Card.Body>
       </Card>
 
