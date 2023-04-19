@@ -62,24 +62,32 @@ export const Setup: React.FC<SetupProps> = ({
 
   return (
     <>
-      <h2>Setup</h2>
-      <p>Some setup stuff goes here...</p>
-      <Button variant="outline-primary" onClick={startGame}>
+      <h2>Setup Game</h2>
+      <h5>Choose Two Players</h5>
+      <Button variant="outline-danger" onClick={startGame}>
         Start Game
       </Button>
-      <Form className="mt-5">
+      <Form className="mt-5 p-5 border">
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-          <Form.Label>Add Players</Form.Label>
+          <Form.Label className="text-dark px-5 py-3 h5">
+            Add Players
+          </Form.Label>
           <Form.Control
             type="text"
             placeholder="Enter new player name"
             value={newPlayerName}
             onChange={(e) => setNewPlayerName(e.target.value)}
           />
-          <Button onClick={validateAndAddNewPlayer}>Add</Button>
+          <Button
+            variant="outline-danger m-5"
+            onClick={validateAndAddNewPlayer}
+          >
+            Add New Player
+          </Button>
         </Form.Group>
         {chosenPlayers.map((x) => (
           <Form.Check
+            className="d-flex flex-row p-1 h6 justify-content-center"
             label={x.name}
             checked={x.checked}
             onChange={() => togglePlayer(x.name)}
