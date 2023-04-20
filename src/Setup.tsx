@@ -62,14 +62,23 @@ export const Setup: React.FC<SetupProps> = ({
 
   return (
     <>
-      <h2>Setup Game</h2>
-      <h5>Choose Two Players</h5>
-      <Button variant="outline-danger" onClick={startGame}>
-        Start Game
-      </Button>
-      <Form className="mt-5 p-5 border">
-        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-          <Form.Label className="text-dark px-5 py-3 h5">
+      <div className="p-2 bg-danger text-light border border-danger mb-3">
+        <h2 className="py-2">Setup Game</h2>
+      </div>
+
+      <div className="p-4 border border-light">
+        <h4 className="py-3 mb-3">Choose Two Players</h4>
+        <Button
+          variant="outline-danger"
+          className="px-3 py-2"
+          onClick={startGame}
+        >
+          Start Game
+        </Button>
+      </div>
+      <Form className=" p-5 mt-3 border border-danger">
+        <Form.Group className="" controlId="exampleForm.ControlInput1">
+          <Form.Label className="text-dark px-5 mb-4 h4">
             Add Players
           </Form.Label>
           <Form.Control
@@ -79,6 +88,7 @@ export const Setup: React.FC<SetupProps> = ({
             onChange={(e) => setNewPlayerName(e.target.value)}
           />
           <Button
+            className="px-3 py-2"
             variant="outline-danger m-5"
             onClick={validateAndAddNewPlayer}
           >
