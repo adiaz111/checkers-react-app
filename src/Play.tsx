@@ -34,36 +34,50 @@ export const Play: React.FC<PlayProps> = ({ addGameResultFunc, setupInfo }) => {
 
   return (
     <>
-      <h2>Play</h2>
-      <hr />
-      <Form.Check
-        label="Non Decision (No Contest)"
-        type="checkbox"
-        checked={happened}
-        onChange={(e) => setHappened(e.target.checked)}
-      />
-      <Form.Check
-        label="King"
-        type="checkbox"
-        checked={happened2}
-        onChange={(e) => setHappened2(e.target.checked)}
-      />
-      <Form.Check
-        label="Double/Tripe+ Move Happened"
-        type="checkbox"
-        checked={happened3}
-        onChange={(e) => setHappened3(e.target.checked)}
-      />{" "}
-      <hr />
-      {setupInfo.chosenPlayers.map((x) => (
-        <Button variant="outline-danger" onClick={() => endGame(x)}>
-          {x} Won
-        </Button>
-      ))}
-      <hr />
-      <Button className="bg-dark py-2 px-3" onClick={() => endGame("/")}>
-        EndGame
-      </Button>
+      <div className="p-2 bg-danger text-light mb-3">
+        <h2 className="py-2">Play</h2>
+      </div>{" "}
+      <div className="border border-danger">
+        <div className="p-4 ">
+          <Form.Check
+            className="d-flex flex-row p-1 m-3 h6 justify-content-center"
+            label="Non Decision (No Contest)"
+            type="checkbox"
+            checked={happened}
+            onChange={(e) => setHappened(e.target.checked)}
+          />
+          <Form.Check
+            className="d-flex flex-row p-1 m-3 h6 justify-content-center"
+            label="King"
+            type="checkbox"
+            checked={happened2}
+            onChange={(e) => setHappened2(e.target.checked)}
+          />
+          <Form.Check
+            className="d-flex flex-row p-1 mt-3 h6 justify-content-center"
+            label="Double/Tripe+ Move Happened"
+            type="checkbox"
+            checked={happened3}
+            onChange={(e) => setHappened3(e.target.checked)}
+          />{" "}
+        </div>
+        <div className=" bg-dark text-light mb-3">
+          <h5 className="py-2">Who Won</h5>
+        </div>
+        {setupInfo.chosenPlayers.map((x) => (
+          <Button variant="outline-danger mt-3 " onClick={() => endGame(x)}>
+            {x} Won
+          </Button>
+        ))}
+        <div>
+          <Button
+            className="bg-dark py-2 px-5 mb-5 mt-5"
+            onClick={() => endGame("/")}
+          >
+            EndGame
+          </Button>
+        </div>
+      </div>
     </>
   );
 };
