@@ -37,7 +37,10 @@ export const Play: React.FC<PlayProps> = ({ addGameResultFunc, setupInfo }) => {
       <div className="p-2 bg-danger text-light mb-3">
         <h2 className="py-2">Play</h2>
       </div>{" "}
-      <div className="border border-danger">
+      <div className=" border border-2 border-danger">
+        <div className=" bg-light text-dark mb-1 mt-3 border border-5 rounded-3">
+          <p className="py-3 h4">Who Won</p>
+        </div>
         <div className="p-4 ">
           <Form.Check
             className="d-flex flex-row p-1 m-3 h6 justify-content-center"
@@ -61,9 +64,7 @@ export const Play: React.FC<PlayProps> = ({ addGameResultFunc, setupInfo }) => {
             onChange={(e) => setHappened3(e.target.checked)}
           />{" "}
         </div>
-        <div className=" bg-dark text-light mb-3">
-          <h5 className="py-2">Who Won</h5>
-        </div>
+
         {setupInfo.chosenPlayers.map((x) => (
           <Button variant="outline-danger mt-3 " onClick={() => endGame(x)}>
             {x} Won
