@@ -66,7 +66,7 @@ export const Setup: React.FC<SetupProps> = ({
         <h2 className="py-2">Setup Game</h2>
       </div>
 
-      <div className="p-4 border border-light">
+      <div className="p-4 border border-5 border-light">
         <h4 className="py-3 mb-3">Choose Two Players</h4>
         <Button
           variant="outline-danger"
@@ -76,7 +76,7 @@ export const Setup: React.FC<SetupProps> = ({
           Start Game
         </Button>
       </div>
-      <Form className=" p-5 mt-3 border border-danger">
+      <Form className=" p-5 mt-3 border border-3 border-danger">
         <Form.Group className="" controlId="exampleForm.ControlInput1">
           <Form.Label className="text-dark px-5 mb-4 h4">
             Add Players

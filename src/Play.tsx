@@ -37,7 +37,7 @@ export const Play: React.FC<PlayProps> = ({ addGameResultFunc, setupInfo }) => {
       <div className="p-2 bg-danger text-light mb-3">
         <h2 className="py-2">Play</h2>
       </div>{" "}
-      <div className=" border border-2 border-danger">
+      <div className=" border border-3 border-danger">
         <div className=" bg-light text-dark mb-1 mt-3 border border-5 rounded-3">
           <p className="py-3 h4">Who Won</p>
         </div>
@@ -66,13 +66,13 @@ export const Play: React.FC<PlayProps> = ({ addGameResultFunc, setupInfo }) => {
         </div>
 
         {setupInfo.chosenPlayers.map((x) => (
-          <Button variant="outline-danger mt-3 " onClick={() => endGame(x)}>
+          <Button variant="outline-danger mt-2 mb-1" onClick={() => endGame(x)}>
             {x} Won
           </Button>
         ))}
         <div>
           <Button
-            className="bg-dark py-2 px-5 mb-5 mt-5"
+            className="border border-light border-3 rounded-4 bg-dark py-2 px-5 mb-3 mt-4"
             onClick={() => endGame("/")}
           >
             EndGame
