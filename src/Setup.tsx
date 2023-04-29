@@ -99,7 +99,7 @@ export const Setup: React.FC<SetupProps> = ({
           <Form.Check
             className="d-flex flex-row p-1 h6 justify-content-center"
             checked={x.checked}
-            label={" -- " + x.name}
+            label={" " + x.name}
             onChange={() => togglePlayer(x.name)}
           />
         ))}
