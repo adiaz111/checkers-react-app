@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/tca-checkers-react-ts-bootstrap/static/css/main.756af292.css",
+    "main.js": "/tca-checkers-react-ts-bootstrap/static/js/main.a9ba5f15.js",
+    "static/js/787.25d200cd.chunk.js": "/tca-checkers-react-ts-bootstrap/static/js/787.25d200cd.chunk.js",
+    "index.html": "/tca-checkers-react-ts-bootstrap/index.html",
+    "main.756af292.css.map": "/tca-checkers-react-ts-bootstrap/static/css/main.756af292.css.map",
+    "main.a9ba5f15.js.map": "/tca-checkers-react-ts-bootstrap/static/js/main.a9ba5f15.js.map",
+    "787.25d200cd.chunk.js.map": "/tca-checkers-react-ts-bootstrap/static/js/787.25d200cd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.756af292.css",
+    "static/js/main.a9ba5f15.js"
+  ]
+}
