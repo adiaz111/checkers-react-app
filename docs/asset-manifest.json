@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/tca-checkers-react-ts-bootstrap/static/css/main.756af292.css",
-    "main.js": "/tca-checkers-react-ts-bootstrap/static/js/main.a9ba5f15.js",
-    "static/js/787.25d200cd.chunk.js": "/tca-checkers-react-ts-bootstrap/static/js/787.25d200cd.chunk.js",
-    "index.html": "/tca-checkers-react-ts-bootstrap/index.html",
-    "main.756af292.css.map": "/tca-checkers-react-ts-bootstrap/static/css/main.756af292.css.map",
-    "main.a9ba5f15.js.map": "/tca-checkers-react-ts-bootstrap/static/js/main.a9ba5f15.js.map",
-    "787.25d200cd.chunk.js.map": "/tca-checkers-react-ts-bootstrap/static/js/787.25d200cd.chunk.js.map"
+    "main.css": "/checkers-react-app/static/css/main.756af292.css",
+    "main.js": "/checkers-react-app/static/js/main.55484fbc.js",
+    "static/js/787.49c08a55.chunk.js": "/checkers-react-app/static/js/787.49c08a55.chunk.js",
+    "index.html": "/checkers-react-app/index.html",
+    "main.756af292.css.map": "/checkers-react-app/static/css/main.756af292.css.map",
+    "main.55484fbc.js.map": "/checkers-react-app/static/js/main.55484fbc.js.map",
+    "787.49c08a55.chunk.js.map": "/checkers-react-app/static/js/787.49c08a55.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.756af292.css",
-    "static/js/main.a9ba5f15.js"
+    "static/js/main.55484fbc.js"
   ]
 }
