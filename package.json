@@ -1,8 +1,8 @@
 {
-  "name": "tca-checkers-react-ts-bootstrap",
+  "name": "tca-checkers-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://2023-spring-adv-fe-tuth.github.io/tca-checkers-react-ts-bootstrap",
+  "homepage": "https://adiaz111.github.io/checkers-react-app",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
